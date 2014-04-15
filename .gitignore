@@ -32,5 +32,4 @@ Desktrop.ini
 .DS_Store
 .directory
 build/
-lib/
 /bin
