@@ -13,6 +13,15 @@ import com.google.common.base.Function;
  * @author Lukas Renggli (renggli@gmail.com)
  */
 public class Functions {
+	
+	public static <T> Function<List<T>, T> middleOfList() {
+		return new Function<List<T>, T>() {
+		      @Override
+		      public T apply(List<T> argument) {
+		        return argument.get(argument.size() / 2);
+		      }
+		    };
+	}
 
   /**
    * Returns a function that returns the first value of a list.
