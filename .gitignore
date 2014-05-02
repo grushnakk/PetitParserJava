@@ -5,7 +5,7 @@
 
 # eclipse and setting files
 */eclipse
-*/bin
+*/bin*
 *.launch
 .settings/
 .metadata
