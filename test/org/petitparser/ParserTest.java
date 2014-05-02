@@ -307,4 +307,11 @@ public class ParserTest {
     assertSuccess(parser, "ababab", Arrays.asList('a', 'b', 'a', 'b', 'a', 'b'));
   }
 
+  @Test
+  public void testBetween() {
+	  Parser parser = character('a').star().between(character('{').trim(), character('}').trim());
+	  assertFailure(parser, "", "{ expected");
+	  assertSuccess(parser, "{}", Arrays.asList('{', Arrays.asList() ,'}'));
+	  assertSuccess(parser, "{a}", Arrays.asList('{', Arrays.asList('a') ,'}'));
+  }
 }

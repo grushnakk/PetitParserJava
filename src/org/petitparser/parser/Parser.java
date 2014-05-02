@@ -308,4 +308,11 @@ public abstract class Parser implements Cloneable {
     return Lists.newArrayList();
   }
 
+  public Parser between(Parser front, Parser end) {
+	  return new SequenceParser(front, this, end);
+  }
+  
+  public Parser between(Parser enclosingParser) {
+	  return between(enclosingParser, enclosingParser);
+  }
 }
